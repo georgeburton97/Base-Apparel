@@ -10,6 +10,8 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
   <title>Base Apparel</title>
 </head>
 <body>
@@ -30,8 +32,8 @@
             <p>Hello fellow shoppers! Here as Base Apparel we believe in providing the most fashionable clothes there are to buy. Enter your Email in the form below to Subscribe and become a member of our exclusive family! (We heard you also get exclusive deals) </p>
           </div>
           <div class="input-field">
-            <input id="email" type="email" class="validate">
-            <label for="email" class="black-text">Email</label>
+            <input id="email1" type="email" class="validate">
+            <label for="email1" class="black-text">Email</label>
           </div>
         </div>
         
@@ -44,24 +46,181 @@
   
   </header>
   <!-- photo / grid -->
-
+  <section class="container section" id="photos">
+    <div class="row">
+      <div class="col s12  l4 ">
+        <img src="images/img-showcase1.jpg" class="responsive-img materialboxed" alt="">
+      </div>
+      <div class="col s12  l6 offset-l1">
+        <h2 class="black-text text-lighten-6 right-align">Explore yourself</h2>
+        <p class="right-align">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero obcaecati molestiae nisi cum soluta dolorem magnam autem.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12  l4 push-l7 offset-l1">
+        <img src="images/img-showcase2.jpg" class="responsive-img materialboxed" alt="">
+      </div>
+      <div class="col s12  l6 pull-l4">
+        <h2 class="black-text text-lighten-6">Accessorize your outfit</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci et expedita eaque in aspernatur blanditiis esse alias facilis nihil dolor?</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12  l4">
+        <img src="images/img-showcase3.jpg" class="responsive-img materialboxed" alt="">
+      </div>
+      <div class="col s12 l6  offset-l1">
+        <h2 class="black-text text-lighten-6 right-align">Wear hand designs</h2>
+        <p class="right-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae a eaque expedita, pariatur tenetur consectetur incidunt magnam nemo aut officiis!</p>
+      </div>
+    </div>
+  </section>
   <!-- parallax -->
-
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="images/sky-bg.jpg" class="responsive-img" alt="">
+    </div>
+  </div>
   <!-- services / tabs -->
-
+  <section class="section container" id="services">
+    <div class="row">
+      <div class="col s12 l4">
+        <h2>What we do..</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+      </div>
+      <div class="col s12 l6 offset-l2">
+        <!-- tabs -->
+        <ul class="tabs">
+          <li class="tab col s6">
+            <a href="#newrange" class="active ">New Range</a>
+          </li>
+          <li class="tab col s6">
+            <a href="#outfit" class="">Plan Your Outfit</a>
+          </li>
+        </ul>
+        <div id="newrange" class="col s12">
+            <p class="flow-text ">New Range</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        </div>
+        <div id="outfit" class="col s12">
+            <p class="flow-text ">Plan Your Outfit</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- parallax -->
-
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="images/mountain-bg.jpg" class="responsive-img" alt="">
+    </div>
+  </div>
   <!-- contact form -->
-
+  <section class="section container" id="contact">
+    <div class="row">
+      <div class="col s12 l5">
+        <h2>Get In Touch</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        <div id='map' style='width: 100%; height: 300px;'></div>
+      </div>
+      <div class="col s12 l5 offset-l2">
+        <form action="">
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input type="email" id="email">
+            <label for="email">Your Email</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">message</i>
+            <textarea id="message" class="materialize-textarea"></textarea>
+            <label for="message">Your message</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">calendar_today</i>
+            <input type="text" id="date" class="datepicker">
+            <label for="date">Choose a date</label>
+          </div>
+          <div class="input-field">
+            <p>Services required...</p>
+            <p>
+              <label>
+                <input type="checkbox">
+                <span>Parties</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox">
+                <span>Weddings</span>
+              </label>
+            </p>
+          </div>
+          <div class="input-field center">
+            <button class="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
   <!-- footer -->
-
+  <footer class="page-footer grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l6">
+          <h5>About Us</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+          <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        </div>
+        <div class="col s12 l4 offset-l2">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#" class="grey-text text-lighten-3"><i class="fab fa-facebook"></i>Facebook</a></li>
+            <li><a href="#" class="grey-text text-lighten-3"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#" class="grey-text text-lighten-3"><i class="fab fa-instagram"></i>Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+      <div class="container center-align">&copy; 2021 Base Apparel</div>
+    </div>
+  </footer>
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYnVydHlnOTciLCJhIjoiY2tsNTI1amNqMXVxeTJ1bGIycjd2c2c0ZSJ9.-CZatSEPtu38uPT4kpHoVQ';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/burtyg97/ckl52on401zlj17p1qswdljby',
+    center: [-1.748485121884871 ,53.79005013527963],
+    zoom: 15
+    });
+
+    var marker = new mapboxgl.Marker({
+      color: "black"
+    })
+    .setLngLat([-1.748485121884871 ,53.79005013527963])
+    .addTo(map);
+    </script>
+
   <script>
     $(document).ready(function(){
-
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+      $('.tabs').tabs();
+      $('.datepicker').datepicker();
     });
+    
   </script>
 </body>
 </html>
