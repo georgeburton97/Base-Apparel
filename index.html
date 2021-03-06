@@ -131,39 +131,39 @@
         <div id='map' style='width: 100%; height: 300px;'></div>
       </div>
       <div class="col s12 l5 offset-l2">
-        <form action="">
+        <form name="contact" method="POST" data-netlify="true" >
           <div class="input-field">
             <i class="material-icons prefix">email</i>
-            <input type="email" id="email">
+            <input type="email" name="email" id="email">
             <label for="email">Your Email</label>
           </div>
           <div class="input-field">
             <i class="material-icons prefix">message</i>
-            <textarea id="message" class="materialize-textarea"></textarea>
+            <textarea id="message" name="message" class="materialize-textarea"></textarea>
             <label for="message">Your message</label>
           </div>
           <div class="input-field">
             <i class="material-icons prefix">calendar_today</i>
-            <input type="text" id="date" class="datepicker">
+            <input type="text" name date id="date" class="datepicker">
             <label for="date">Choose a date</label>
           </div>
           <div class="input-field">
             <p>Services required...</p>
             <p>
               <label>
-                <input type="checkbox">
+                <input  type="checkbox">
                 <span>Parties</span>
               </label>
             </p>
             <p>
               <label>
-                <input type="checkbox">
+                <input  type="checkbox">
                 <span>Weddings</span>
               </label>
             </p>
           </div>
           <div class="input-field center">
-            <button class="btn">Submit</button>
+            <button type="submit" class="btn">Submit</button>
           </div>
         </form>
       </div>
